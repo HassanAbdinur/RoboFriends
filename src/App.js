@@ -14,7 +14,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        console.log('check');
+        this.setState({ robots: robots });
     }
 
     onSearchChange = (event) => {
