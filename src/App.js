@@ -11,10 +11,12 @@ class App extends Component {
             robots: [],
             searchfield: ''
         }
+        console.log('constructor');
     }
 
     componentDidMount() {
         this.setState({ robots: robots });
+        console.log('componentDidMount');
     }
 
     onSearchChange = (event) => {
@@ -25,6 +27,7 @@ class App extends Component {
         const filteredRobots = this.state.robots.filter(robots => {
             return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
+        console.log('render');
         return(
             <div className='tc'>
                 <h1 className='f1'>RoboFriends</h1>
