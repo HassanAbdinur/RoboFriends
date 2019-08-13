@@ -7,7 +7,17 @@ class ErrorBoundary extends Component {
             hasError: false
         }
     }
-    render() {
+
+    componentDidCatch() {
         
     }
+
+    render() {
+        if (this.state.hasError) {
+            return <h1>Oooops. That is not good</h1>
+        }
+        return this.props.children
+    }
 }
+
+export default ErrorBoundary;
