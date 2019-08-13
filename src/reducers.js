@@ -3,5 +3,7 @@ const intialState = {
 }
 
 export const searchRobots = (state=intialState, action={}) => {
-    switch(action.type)
+    switch(action.type) {
+        
+    }
 }
