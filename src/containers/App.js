@@ -34,10 +34,6 @@ class App extends Component {
             .then(users => this.setState({ robots: users }));
     }
 
-    onSearchChange = (event) => {
-        this.setState({ searchfield: event.target.value })
-    }
-
     render() {
         const { robots, searchfield } = this.state;
         const filteredRobots = robots.filter(robot => {
