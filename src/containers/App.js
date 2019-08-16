@@ -31,11 +31,11 @@ class App extends Component {
     }
 
     render() {
-        const { searchField, onSearchChange, robots } = this.props;
+        const { searchField, onSearchChange, robots, isPending } = this.props;
         const filteredRobots = robots.filter(robot => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
-            return !robots.length ?
+            return isPending ?
             <h1>Loading</h1> :
             (
                 <div className='tc'>
