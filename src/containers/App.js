@@ -25,14 +25,13 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class App extends Component {
-    
+
     componentDidMount() {
         this.props.onRequestRobots();
     }
 
     render() {
-        const { robots } = this.state;
-        const { searchField, onSearchChange } = this.props;
+        const { searchField, onSearchChange, robots } = this.props;
         const filteredRobots = robots.filter(robot => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
