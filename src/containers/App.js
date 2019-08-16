@@ -20,12 +20,11 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
-        onRequestRobots: () => dispatch(requestRobots)
+        onRequestRobots: () => dispatch(requestRobots())
     }
 }
 
 class App extends Component {
-
     componentDidMount() {
         this.props.onRequestRobots();
     }
